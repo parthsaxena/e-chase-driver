@@ -1,0 +1,849 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		047E3E66F5A8223ABA9E7962 /* Pods_E_chase_DriverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6669CDE184560C565E78AA8 /* Pods_E_chase_DriverTests.framework */; };
+		8B56F05C1F13FDEC00BB5144 /* PickItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B56F05B1F13FDEC00BB5144 /* PickItemTableViewCell.swift */; };
+		8B6188421F0831A100BF97A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188411F0831A100BF97A6 /* AppDelegate.swift */; };
+		8B6188441F0831A100BF97A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188431F0831A100BF97A6 /* ViewController.swift */; };
+		8B6188471F0831A100BF97A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188451F0831A100BF97A6 /* Main.storyboard */; };
+		8B6188491F0831A100BF97A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188481F0831A100BF97A6 /* Assets.xcassets */; };
+		8B61884C1F0831A100BF97A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B61884A1F0831A100BF97A6 /* LaunchScreen.storyboard */; };
+		8B6188571F0831A100BF97A6 /* E_chase_DriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188561F0831A100BF97A6 /* E_chase_DriverTests.swift */; };
+		8B6188621F0831A100BF97A6 /* E_chase_DriverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188611F0831A100BF97A6 /* E_chase_DriverUITests.swift */; };
+		8B6188701F0AFDBE00BF97A6 /* MainLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61886F1F0AFDBE00BF97A6 /* MainLoginViewController.swift */; };
+		8B6188751F0AFDE600BF97A6 /* BottomToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188711F0AFDE600BF97A6 /* BottomToTop.swift */; };
+		8B6188761F0AFDE600BF97A6 /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188721F0AFDE600BF97A6 /* SegueFromLeft.swift */; };
+		8B6188771F0AFDE600BF97A6 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188731F0AFDE600BF97A6 /* SegueFromRight.swift */; };
+		8B6188781F0AFDE600BF97A6 /* TopToBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188741F0AFDE600BF97A6 /* TopToBottom.swift */; };
+		8B61887B1F0AFE8500BF97A6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61887A1F0AFE8500BF97A6 /* LoginViewController.swift */; };
+		8B61887D1F0B000300BF97A6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B61887C1F0B000300BF97A6 /* GoogleService-Info.plist */; };
+		8B61887F1F0BA15B00BF97A6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B61887E1F0BA15B00BF97A6 /* MainViewController.swift */; };
+		8B6188981F0BA1BD00BF97A6 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B61888C1F0BA1BD00BF97A6 /* Roboto-Black.ttf */; };
+		8B6188991F0BA1BD00BF97A6 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B61888D1F0BA1BD00BF97A6 /* Roboto-BlackItalic.ttf */; };
+		8B61889A1F0BA1BD00BF97A6 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B61888E1F0BA1BD00BF97A6 /* Roboto-Bold.ttf */; };
+		8B61889B1F0BA1BD00BF97A6 /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B61888F1F0BA1BD00BF97A6 /* Roboto-BoldItalic.ttf */; };
+		8B61889C1F0BA1BD00BF97A6 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188901F0BA1BD00BF97A6 /* Roboto-Italic.ttf */; };
+		8B61889D1F0BA1BD00BF97A6 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188911F0BA1BD00BF97A6 /* Roboto-Light.ttf */; };
+		8B61889E1F0BA1BD00BF97A6 /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188921F0BA1BD00BF97A6 /* Roboto-LightItalic.ttf */; };
+		8B61889F1F0BA1BD00BF97A6 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188931F0BA1BD00BF97A6 /* Roboto-Medium.ttf */; };
+		8B6188A01F0BA1BD00BF97A6 /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188941F0BA1BD00BF97A6 /* Roboto-MediumItalic.ttf */; };
+		8B6188A11F0BA1BD00BF97A6 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188951F0BA1BD00BF97A6 /* Roboto-Regular.ttf */; };
+		8B6188A21F0BA1BD00BF97A6 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188961F0BA1BD00BF97A6 /* Roboto-Thin.ttf */; };
+		8B6188A31F0BA1BD00BF97A6 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B6188971F0BA1BD00BF97A6 /* Roboto-ThinItalic.ttf */; };
+		8B6188AB1F11CC5F00BF97A6 /* ConfirmOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188AA1F11CC5F00BF97A6 /* ConfirmOrderViewController.swift */; };
+		8B6188AD1F11CD0900BF97A6 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188AC1F11CD0900BF97A6 /* GlobalVariables.swift */; };
+		8B6188AF1F11ECBD00BF97A6 /* OrderItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188AE1F11ECBD00BF97A6 /* OrderItemTableViewCell.swift */; };
+		8B6188B11F13FC8500BF97A6 /* PickItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6188B01F13FC8500BF97A6 /* PickItemsTableViewController.swift */; };
+		A0F7F3AAC7891E52F6D22F7B /* Pods_E_chase_DriverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4795EA5803E8B27B47D6CD99 /* Pods_E_chase_DriverUITests.framework */; };
+		C0D113CF385E479D6FBE0B8C /* Pods_E_chase_Driver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CCBD406D80501E72D039D8 /* Pods_E_chase_Driver.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B6188531F0831A100BF97A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B6188361F0831A100BF97A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B61883D1F0831A100BF97A6;
+			remoteInfo = "E-chase Driver";
+		};
+		8B61885E1F0831A100BF97A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B6188361F0831A100BF97A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B61883D1F0831A100BF97A6;
+			remoteInfo = "E-chase Driver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1674ACD58C9B0E8B96A5778B /* Pods-E-chase Driver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-chase Driver.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-chase Driver/Pods-E-chase Driver.release.xcconfig"; sourceTree = "<group>"; };
+		44166FBAEF3A678B5CE06D4A /* Pods-E-chase DriverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-chase DriverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-chase DriverTests/Pods-E-chase DriverTests.release.xcconfig"; sourceTree = "<group>"; };
+		4795EA5803E8B27B47D6CD99 /* Pods_E_chase_DriverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_chase_DriverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B56F05B1F13FDEC00BB5144 /* PickItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickItemTableViewCell.swift; sourceTree = "<group>"; };
+		8B61883E1F0831A100BF97A6 /* E-chase Driver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-chase Driver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6188411F0831A100BF97A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B6188431F0831A100BF97A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B6188461F0831A100BF97A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B6188481F0831A100BF97A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B61884B1F0831A100BF97A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B61884D1F0831A100BF97A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B6188521F0831A100BF97A6 /* E-chase DriverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-chase DriverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6188561F0831A100BF97A6 /* E_chase_DriverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_chase_DriverTests.swift; sourceTree = "<group>"; };
+		8B6188581F0831A100BF97A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B61885D1F0831A100BF97A6 /* E-chase DriverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-chase DriverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B6188611F0831A100BF97A6 /* E_chase_DriverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_chase_DriverUITests.swift; sourceTree = "<group>"; };
+		8B6188631F0831A100BF97A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B61886F1F0AFDBE00BF97A6 /* MainLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLoginViewController.swift; sourceTree = "<group>"; };
+		8B6188711F0AFDE600BF97A6 /* BottomToTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomToTop.swift; sourceTree = "<group>"; };
+		8B6188721F0AFDE600BF97A6 /* SegueFromLeft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
+		8B6188731F0AFDE600BF97A6 /* SegueFromRight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
+		8B6188741F0AFDE600BF97A6 /* TopToBottom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopToBottom.swift; sourceTree = "<group>"; };
+		8B61887A1F0AFE8500BF97A6 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8B61887C1F0B000300BF97A6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8B61887E1F0BA15B00BF97A6 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8B61888C1F0BA1BD00BF97A6 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		8B61888D1F0BA1BD00BF97A6 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		8B61888E1F0BA1BD00BF97A6 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		8B61888F1F0BA1BD00BF97A6 /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8B6188901F0BA1BD00BF97A6 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		8B6188911F0BA1BD00BF97A6 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		8B6188921F0BA1BD00BF97A6 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		8B6188931F0BA1BD00BF97A6 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		8B6188941F0BA1BD00BF97A6 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		8B6188951F0BA1BD00BF97A6 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		8B6188961F0BA1BD00BF97A6 /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		8B6188971F0BA1BD00BF97A6 /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		8B6188AA1F11CC5F00BF97A6 /* ConfirmOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmOrderViewController.swift; sourceTree = "<group>"; };
+		8B6188AC1F11CD0900BF97A6 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		8B6188AE1F11ECBD00BF97A6 /* OrderItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderItemTableViewCell.swift; sourceTree = "<group>"; };
+		8B6188B01F13FC8500BF97A6 /* PickItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickItemsTableViewController.swift; sourceTree = "<group>"; };
+		A6669CDE184560C565E78AA8 /* Pods_E_chase_DriverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_chase_DriverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0CCBD406D80501E72D039D8 /* Pods_E_chase_Driver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_chase_Driver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C6FEB7C99BC14A532903F3 /* Pods-E-chase DriverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-chase DriverUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-E-chase DriverUITests/Pods-E-chase DriverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D4FA2BA0B696D0A9178BBEEE /* Pods-E-chase DriverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-chase DriverUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-chase DriverUITests/Pods-E-chase DriverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E775307258B39A7EE8EA3349 /* Pods-E-chase DriverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-chase DriverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-chase DriverTests/Pods-E-chase DriverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EC841F21DAAF019B8BABC4D6 /* Pods-E-chase Driver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-chase Driver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-E-chase Driver/Pods-E-chase Driver.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B61883B1F0831A100BF97A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0D113CF385E479D6FBE0B8C /* Pods_E_chase_Driver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B61884F1F0831A100BF97A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047E3E66F5A8223ABA9E7962 /* Pods_E_chase_DriverTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B61885A1F0831A100BF97A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0F7F3AAC7891E52F6D22F7B /* Pods_E_chase_DriverUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		504284718F9AD9896318D9B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0CCBD406D80501E72D039D8 /* Pods_E_chase_Driver.framework */,
+				A6669CDE184560C565E78AA8 /* Pods_E_chase_DriverTests.framework */,
+				4795EA5803E8B27B47D6CD99 /* Pods_E_chase_DriverUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B6188351F0831A100BF97A6 = {
+			isa = PBXGroup;
+			children = (
+				8B6188401F0831A100BF97A6 /* E-chase Driver */,
+				8B6188551F0831A100BF97A6 /* E-chase DriverTests */,
+				8B6188601F0831A100BF97A6 /* E-chase DriverUITests */,
+				8B61883F1F0831A100BF97A6 /* Products */,
+				DC63B7E14804C7FF1710FD09 /* Pods */,
+				504284718F9AD9896318D9B8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8B61883F1F0831A100BF97A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B61883E1F0831A100BF97A6 /* E-chase Driver.app */,
+				8B6188521F0831A100BF97A6 /* E-chase DriverTests.xctest */,
+				8B61885D1F0831A100BF97A6 /* E-chase DriverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B6188401F0831A100BF97A6 /* E-chase Driver */ = {
+			isa = PBXGroup;
+			children = (
+				8B6188B01F13FC8500BF97A6 /* PickItemsTableViewController.swift */,
+				8B56F05B1F13FDEC00BB5144 /* PickItemTableViewCell.swift */,
+				8B6188AC1F11CD0900BF97A6 /* GlobalVariables.swift */,
+				8B6188411F0831A100BF97A6 /* AppDelegate.swift */,
+				8B6188791F0AFDEA00BF97A6 /* Custom Segues */,
+				8B6188431F0831A100BF97A6 /* ViewController.swift */,
+				8B6188451F0831A100BF97A6 /* Main.storyboard */,
+				8B61887E1F0BA15B00BF97A6 /* MainViewController.swift */,
+				8B61887A1F0AFE8500BF97A6 /* LoginViewController.swift */,
+				8B61886F1F0AFDBE00BF97A6 /* MainLoginViewController.swift */,
+				8B6188AA1F11CC5F00BF97A6 /* ConfirmOrderViewController.swift */,
+				8B6188A41F0BA1C200BF97A6 /* Fonts */,
+				8B6188481F0831A100BF97A6 /* Assets.xcassets */,
+				8B61884A1F0831A100BF97A6 /* LaunchScreen.storyboard */,
+				8B61887C1F0B000300BF97A6 /* GoogleService-Info.plist */,
+				8B61884D1F0831A100BF97A6 /* Info.plist */,
+			);
+			path = "E-chase Driver";
+			sourceTree = "<group>";
+		};
+		8B6188551F0831A100BF97A6 /* E-chase DriverTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B6188561F0831A100BF97A6 /* E_chase_DriverTests.swift */,
+				8B6188581F0831A100BF97A6 /* Info.plist */,
+			);
+			path = "E-chase DriverTests";
+			sourceTree = "<group>";
+		};
+		8B6188601F0831A100BF97A6 /* E-chase DriverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8B6188611F0831A100BF97A6 /* E_chase_DriverUITests.swift */,
+				8B6188631F0831A100BF97A6 /* Info.plist */,
+			);
+			path = "E-chase DriverUITests";
+			sourceTree = "<group>";
+		};
+		8B6188791F0AFDEA00BF97A6 /* Custom Segues */ = {
+			isa = PBXGroup;
+			children = (
+				8B6188AE1F11ECBD00BF97A6 /* OrderItemTableViewCell.swift */,
+				8B6188711F0AFDE600BF97A6 /* BottomToTop.swift */,
+				8B6188721F0AFDE600BF97A6 /* SegueFromLeft.swift */,
+				8B6188731F0AFDE600BF97A6 /* SegueFromRight.swift */,
+				8B6188741F0AFDE600BF97A6 /* TopToBottom.swift */,
+			);
+			name = "Custom Segues";
+			sourceTree = "<group>";
+		};
+		8B6188A41F0BA1C200BF97A6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8B61888C1F0BA1BD00BF97A6 /* Roboto-Black.ttf */,
+				8B61888D1F0BA1BD00BF97A6 /* Roboto-BlackItalic.ttf */,
+				8B61888E1F0BA1BD00BF97A6 /* Roboto-Bold.ttf */,
+				8B61888F1F0BA1BD00BF97A6 /* Roboto-BoldItalic.ttf */,
+				8B6188901F0BA1BD00BF97A6 /* Roboto-Italic.ttf */,
+				8B6188911F0BA1BD00BF97A6 /* Roboto-Light.ttf */,
+				8B6188921F0BA1BD00BF97A6 /* Roboto-LightItalic.ttf */,
+				8B6188931F0BA1BD00BF97A6 /* Roboto-Medium.ttf */,
+				8B6188941F0BA1BD00BF97A6 /* Roboto-MediumItalic.ttf */,
+				8B6188951F0BA1BD00BF97A6 /* Roboto-Regular.ttf */,
+				8B6188961F0BA1BD00BF97A6 /* Roboto-Thin.ttf */,
+				8B6188971F0BA1BD00BF97A6 /* Roboto-ThinItalic.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		DC63B7E14804C7FF1710FD09 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC841F21DAAF019B8BABC4D6 /* Pods-E-chase Driver.debug.xcconfig */,
+				1674ACD58C9B0E8B96A5778B /* Pods-E-chase Driver.release.xcconfig */,
+				E775307258B39A7EE8EA3349 /* Pods-E-chase DriverTests.debug.xcconfig */,
+				44166FBAEF3A678B5CE06D4A /* Pods-E-chase DriverTests.release.xcconfig */,
+				D4FA2BA0B696D0A9178BBEEE /* Pods-E-chase DriverUITests.debug.xcconfig */,
+				C9C6FEB7C99BC14A532903F3 /* Pods-E-chase DriverUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B61883D1F0831A100BF97A6 /* E-chase Driver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6188661F0831A100BF97A6 /* Build configuration list for PBXNativeTarget "E-chase Driver" */;
+			buildPhases = (
+				52D5CFBE219F48147CA98163 /* [CP] Check Pods Manifest.lock */,
+				8B61883A1F0831A100BF97A6 /* Sources */,
+				8B61883B1F0831A100BF97A6 /* Frameworks */,
+				8B61883C1F0831A100BF97A6 /* Resources */,
+				2E786091B43F938498E87A88 /* [CP] Embed Pods Frameworks */,
+				57F123E1BB8DBAFDB1E62DD9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "E-chase Driver";
+			productName = "E-chase Driver";
+			productReference = 8B61883E1F0831A100BF97A6 /* E-chase Driver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B6188511F0831A100BF97A6 /* E-chase DriverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B6188691F0831A100BF97A6 /* Build configuration list for PBXNativeTarget "E-chase DriverTests" */;
+			buildPhases = (
+				70EDC6A4A63EF6BD702A6794 /* [CP] Check Pods Manifest.lock */,
+				8B61884E1F0831A100BF97A6 /* Sources */,
+				8B61884F1F0831A100BF97A6 /* Frameworks */,
+				8B6188501F0831A100BF97A6 /* Resources */,
+				EFA8C1C0F279709A4DF55AEB /* [CP] Embed Pods Frameworks */,
+				12AD9C87DD378C149CAAC1DC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B6188541F0831A100BF97A6 /* PBXTargetDependency */,
+			);
+			name = "E-chase DriverTests";
+			productName = "E-chase DriverTests";
+			productReference = 8B6188521F0831A100BF97A6 /* E-chase DriverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B61885C1F0831A100BF97A6 /* E-chase DriverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B61886C1F0831A100BF97A6 /* Build configuration list for PBXNativeTarget "E-chase DriverUITests" */;
+			buildPhases = (
+				CD4FAD8CF62C774932CFB0B1 /* [CP] Check Pods Manifest.lock */,
+				8B6188591F0831A100BF97A6 /* Sources */,
+				8B61885A1F0831A100BF97A6 /* Frameworks */,
+				8B61885B1F0831A100BF97A6 /* Resources */,
+				3C4DB79342692EBE8C4ADB49 /* [CP] Embed Pods Frameworks */,
+				A8CB2E5C22FF77C148DB846F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B61885F1F0831A100BF97A6 /* PBXTargetDependency */,
+			);
+			name = "E-chase DriverUITests";
+			productName = "E-chase DriverUITests";
+			productReference = 8B61885D1F0831A100BF97A6 /* E-chase DriverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B6188361F0831A100BF97A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Parth Saxena";
+				TargetAttributes = {
+					8B61883D1F0831A100BF97A6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 69TNSUL7ZG;
+						ProvisioningStyle = Automatic;
+					};
+					8B6188511F0831A100BF97A6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 69TNSUL7ZG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8B61883D1F0831A100BF97A6;
+					};
+					8B61885C1F0831A100BF97A6 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 69TNSUL7ZG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8B61883D1F0831A100BF97A6;
+					};
+				};
+			};
+			buildConfigurationList = 8B6188391F0831A100BF97A6 /* Build configuration list for PBXProject "E-chase Driver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B6188351F0831A100BF97A6;
+			productRefGroup = 8B61883F1F0831A100BF97A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B61883D1F0831A100BF97A6 /* E-chase Driver */,
+				8B6188511F0831A100BF97A6 /* E-chase DriverTests */,
+				8B61885C1F0831A100BF97A6 /* E-chase DriverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B61883C1F0831A100BF97A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B61889A1F0BA1BD00BF97A6 /* Roboto-Bold.ttf in Resources */,
+				8B61889E1F0BA1BD00BF97A6 /* Roboto-LightItalic.ttf in Resources */,
+				8B6188A01F0BA1BD00BF97A6 /* Roboto-MediumItalic.ttf in Resources */,
+				8B61889C1F0BA1BD00BF97A6 /* Roboto-Italic.ttf in Resources */,
+				8B61889D1F0BA1BD00BF97A6 /* Roboto-Light.ttf in Resources */,
+				8B61884C1F0831A100BF97A6 /* LaunchScreen.storyboard in Resources */,
+				8B61889B1F0BA1BD00BF97A6 /* Roboto-BoldItalic.ttf in Resources */,
+				8B6188991F0BA1BD00BF97A6 /* Roboto-BlackItalic.ttf in Resources */,
+				8B6188A21F0BA1BD00BF97A6 /* Roboto-Thin.ttf in Resources */,
+				8B6188A11F0BA1BD00BF97A6 /* Roboto-Regular.ttf in Resources */,
+				8B61887D1F0B000300BF97A6 /* GoogleService-Info.plist in Resources */,
+				8B61889F1F0BA1BD00BF97A6 /* Roboto-Medium.ttf in Resources */,
+				8B6188A31F0BA1BD00BF97A6 /* Roboto-ThinItalic.ttf in Resources */,
+				8B6188981F0BA1BD00BF97A6 /* Roboto-Black.ttf in Resources */,
+				8B6188491F0831A100BF97A6 /* Assets.xcassets in Resources */,
+				8B6188471F0831A100BF97A6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6188501F0831A100BF97A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B61885B1F0831A100BF97A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		12AD9C87DD378C149CAAC1DC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-E-chase DriverTests/Pods-E-chase DriverTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E786091B43F938498E87A88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-E-chase Driver/Pods-E-chase Driver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C4DB79342692EBE8C4ADB49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-E-chase DriverUITests/Pods-E-chase DriverUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52D5CFBE219F48147CA98163 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		57F123E1BB8DBAFDB1E62DD9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-E-chase Driver/Pods-E-chase Driver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70EDC6A4A63EF6BD702A6794 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A8CB2E5C22FF77C148DB846F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-E-chase DriverUITests/Pods-E-chase DriverUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD4FAD8CF62C774932CFB0B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EFA8C1C0F279709A4DF55AEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-E-chase DriverTests/Pods-E-chase DriverTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B61883A1F0831A100BF97A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6188441F0831A100BF97A6 /* ViewController.swift in Sources */,
+				8B6188701F0AFDBE00BF97A6 /* MainLoginViewController.swift in Sources */,
+				8B6188771F0AFDE600BF97A6 /* SegueFromRight.swift in Sources */,
+				8B56F05C1F13FDEC00BB5144 /* PickItemTableViewCell.swift in Sources */,
+				8B6188421F0831A100BF97A6 /* AppDelegate.swift in Sources */,
+				8B6188AB1F11CC5F00BF97A6 /* ConfirmOrderViewController.swift in Sources */,
+				8B6188AF1F11ECBD00BF97A6 /* OrderItemTableViewCell.swift in Sources */,
+				8B61887B1F0AFE8500BF97A6 /* LoginViewController.swift in Sources */,
+				8B6188AD1F11CD0900BF97A6 /* GlobalVariables.swift in Sources */,
+				8B6188761F0AFDE600BF97A6 /* SegueFromLeft.swift in Sources */,
+				8B6188B11F13FC8500BF97A6 /* PickItemsTableViewController.swift in Sources */,
+				8B61887F1F0BA15B00BF97A6 /* MainViewController.swift in Sources */,
+				8B6188781F0AFDE600BF97A6 /* TopToBottom.swift in Sources */,
+				8B6188751F0AFDE600BF97A6 /* BottomToTop.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B61884E1F0831A100BF97A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6188571F0831A100BF97A6 /* E_chase_DriverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B6188591F0831A100BF97A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6188621F0831A100BF97A6 /* E_chase_DriverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B6188541F0831A100BF97A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B61883D1F0831A100BF97A6 /* E-chase Driver */;
+			targetProxy = 8B6188531F0831A100BF97A6 /* PBXContainerItemProxy */;
+		};
+		8B61885F1F0831A100BF97A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B61883D1F0831A100BF97A6 /* E-chase Driver */;
+			targetProxy = 8B61885E1F0831A100BF97A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B6188451F0831A100BF97A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B6188461F0831A100BF97A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B61884A1F0831A100BF97A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B61884B1F0831A100BF97A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B6188641F0831A100BF97A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B6188651F0831A100BF97A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B6188671F0831A100BF97A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC841F21DAAF019B8BABC4D6 /* Pods-E-chase Driver.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 69TNSUL7ZG;
+				INFOPLIST_FILE = "E-chase Driver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.socify.E-chase-Driver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8B6188681F0831A100BF97A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1674ACD58C9B0E8B96A5778B /* Pods-E-chase Driver.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 69TNSUL7ZG;
+				INFOPLIST_FILE = "E-chase Driver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.socify.E-chase-Driver";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8B61886A1F0831A100BF97A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E775307258B39A7EE8EA3349 /* Pods-E-chase DriverTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 69TNSUL7ZG;
+				INFOPLIST_FILE = "E-chase DriverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.socify.E-chase-DriverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E-chase Driver.app/E-chase Driver";
+			};
+			name = Debug;
+		};
+		8B61886B1F0831A100BF97A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44166FBAEF3A678B5CE06D4A /* Pods-E-chase DriverTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 69TNSUL7ZG;
+				INFOPLIST_FILE = "E-chase DriverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.socify.E-chase-DriverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/E-chase Driver.app/E-chase Driver";
+			};
+			name = Release;
+		};
+		8B61886D1F0831A100BF97A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4FA2BA0B696D0A9178BBEEE /* Pods-E-chase DriverUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 69TNSUL7ZG;
+				INFOPLIST_FILE = "E-chase DriverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.socify.E-chase-DriverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "E-chase Driver";
+			};
+			name = Debug;
+		};
+		8B61886E1F0831A100BF97A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9C6FEB7C99BC14A532903F3 /* Pods-E-chase DriverUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 69TNSUL7ZG;
+				INFOPLIST_FILE = "E-chase DriverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.socify.E-chase-DriverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "E-chase Driver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B6188391F0831A100BF97A6 /* Build configuration list for PBXProject "E-chase Driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6188641F0831A100BF97A6 /* Debug */,
+				8B6188651F0831A100BF97A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B6188661F0831A100BF97A6 /* Build configuration list for PBXNativeTarget "E-chase Driver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B6188671F0831A100BF97A6 /* Debug */,
+				8B6188681F0831A100BF97A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B6188691F0831A100BF97A6 /* Build configuration list for PBXNativeTarget "E-chase DriverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B61886A1F0831A100BF97A6 /* Debug */,
+				8B61886B1F0831A100BF97A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B61886C1F0831A100BF97A6 /* Build configuration list for PBXNativeTarget "E-chase DriverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B61886D1F0831A100BF97A6 /* Debug */,
+				8B61886E1F0831A100BF97A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8B6188361F0831A100BF97A6 /* Project object */;
+}
