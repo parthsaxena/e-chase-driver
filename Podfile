@@ -12,6 +12,7 @@ target 'E-chase Driver' do
   pod 'Firebase/Storage'  
   pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
   pod 'M13Checkbox'
+  pod 'IQKeyboardManagerSwift'
 
   target 'E-chase DriverTests' do
     inherit! :search_paths

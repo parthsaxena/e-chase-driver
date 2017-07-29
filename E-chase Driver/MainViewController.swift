@@ -13,6 +13,10 @@ import Firebase
 
 class MainViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    @IBOutlet weak var statusButton: UIButton!
+    
+    var circleQuery: GFCircleQuery!
+    
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     var effect: UIVisualEffect!
     
@@ -29,6 +33,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     var timer = Timer()
     var currentOrderTimerCount = 60
     var currentOrderRequest: [String: Any]!
+    var currentOrderID: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +47,9 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
         self.navigationController?.navigationBar.alpha = 1
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Roboto-Light", size: 24)!, NSForegroundColorAttributeName: UIColor.init(red: 49/255, green: 146/255, blue: 210/255, alpha: 1)]
+        
+        // SET COLOR OF BUTTON
+        self.statusButton.backgroundColor = UIColor(red: 49/255, green: 136/255, blue: 210/255, alpha: 1.0)
         
         // INITIALIZE MAP
         //self.locationManager.requestAlwaysAuthorization()
@@ -132,23 +140,46 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     }
     
     @IBAction func goOnlineTapped(_ sender: Any) {
-        let alert = UIAlertController(title: "Confirm", message: "Are you sure you would like to go online?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
-            // PERFORM UI UPDATES
-            self.driverStatusLabel.text = "WAITING FOR ORDERS..."
-            
-            // UPDATE DRIVER STATUS ON FIREBASE
-            self.receiveOrders()
-        }))
-        alert.view.tintColor = UIColor.red
-        self.present(alert, animated: true, completion: nil)
+        if GlobalVariables.DRIVER_STATUS == "OFFLINE" {
+            let alert = UIAlertController(title: "Confirm", message: "Are you sure you would like to go online?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                
+                GlobalVariables.DRIVER_STATUS = "ONLINE"
+                
+                // PERFORM UI UPDATES
+                self.statusButton.backgroundColor = UIColor.red
+                self.statusButton.setTitle("GO OFFLINE", for: .normal)
+                self.driverStatusLabel.text = "WAITING FOR ORDERS..."
+                
+                // UPDATE DRIVER STATUS ON FIREBASE
+                self.receiveOrders()
+            }))
+            alert.view.tintColor = UIColor.red
+            self.present(alert, animated: true, completion: nil)
+        } else if GlobalVariables.DRIVER_STATUS == "ONLINE" {
+            let alert = UIAlertController(title: "Confirm", message: "Are you sure you would like to go offline?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+                
+                GlobalVariables.DRIVER_STATUS = "OFFLINE"
+                
+                // PERFORM UI UPDATES
+                self.statusButton.backgroundColor = UIColor(red: 49/255, green: 136/255, blue: 210/255, alpha: 1.0)
+                self.statusButton.setTitle("GO ONLINE", for: .normal)
+                self.driverStatusLabel.text = "YOU ARE CURRENTLY OFFLINE."
+                
+                // UPDATE DRIVER STATUS ON FIREBASE
+                self.circleQuery.removeAllObservers()
+            }))
+            alert.view.tintColor = UIColor.red
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func receiveOrders() {
         let geofire = GeoFire.init(firebaseRef: Database.database().reference().child("orders_locations"))
-        let circleQuery = geofire?.query(at: rawUserLocation, withRadius: 1000.0)
-        
+        circleQuery = geofire?.query(at: rawUserLocation, withRadius: 1000.0)
         circleQuery?.observe(.keyEntered, with: { (key, location) in
             if let orderKey = key as? String {
                 print("ORDER KEY: \(orderKey) HAS BEEN PLACED.")
@@ -160,6 +191,7 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
                                 if let fullName = userDictionary["fullname"] as? String, let address = userDictionary["address"] as? String {
                                     print("DETAILS: \(fullName), \(address)")
                                     self.currentOrderRequest = orderDictionary
+                                    self.currentOrderID = orderKey
                                     self.fullNameOrderView.text = fullName
                                     self.addressOrderView.text = address
                                     self.animateOrderIn()
@@ -191,7 +223,9 @@ class MainViewController: UIViewController, CLLocationManagerDelegate, MKMapView
     @IBAction func acceptOrderTapped(_ sender: Any) {
         // SET VARIABLE FOR NEXT VC
         GlobalVariables.CURRENT_ORDER_REQUEST = self.currentOrderRequest
-        // UPDATE DRIVER AND ORDER STATUS 
+        GlobalVariables.CURRENT_ORDER_ID = self.currentOrderID
+        
+        // UPDATE DRIVER AND ORDER STATUS
         
         // NEXT VIEWCONTROLLER
         self.navigationController?.performSegue(withIdentifier: "SegueToConfirmOrder", sender: self)

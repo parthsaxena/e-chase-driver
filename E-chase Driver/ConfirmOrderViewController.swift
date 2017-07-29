@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ConfirmOrderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -125,6 +127,7 @@ class ConfirmOrderViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBAction func confirmOrderTapped(_ sender: Any) {
         // UPDATE DRIVER AND ORDER STATUS
+        Database.database().reference().child("orders").child(GlobalVariables.CURRENT_ORDER_ID).updateChildValues(["takenBy":Auth.auth().currentUser?.uid, "orderTaken":"true"])
         
         // SEGUE
         self.navigationController?.performSegue(withIdentifier: "SegueToPickUpOrder", sender: nil)

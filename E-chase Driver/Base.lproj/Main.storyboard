@@ -231,7 +231,7 @@
                                 <rect key="frame" x="4" y="190" width="367" height="165"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="E-chase Driver" translatesAutoresizingMaskIntoConstraints="NO" id="hdy-yA-2eY">
-                                <rect key="frame" x="39" y="63" width="296" height="37"/>
+                                <rect key="frame" x="39.5" y="63" width="296" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="296" id="EjM-zP-QY0"/>
                                     <constraint firstAttribute="height" constant="37" id="RYr-s7-8HI"/>
@@ -281,10 +281,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grc-8s-47b">
-                                <rect key="frame" x="0.0" y="519" width="375" height="55"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oP-Hj-fBT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="1kv-1A-v5Q">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grc-8s-47b">
+                                <rect key="frame" x="0.0" y="519" width="375" height="55"/>
                                 <color key="backgroundColor" red="0.19215686274509802" green="0.5725490196078431" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="eCa-CC-MKw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="20"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="GO ONLINE">
@@ -294,52 +305,51 @@
                                     <action selector="goOnlineTapped:" destination="7uP-e4-IEX" eventType="touchUpInside" id="1j4-xi-uzt"/>
                                 </connections>
                             </button>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9XC-yn-eEd">
-                                <rect key="frame" x="0.0" y="117" width="375" height="402"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9XC-yn-eEd">
+                                <rect key="frame" x="-0.5" y="113" width="375.5" height="406"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="406" id="cBO-PG-r5b"/>
+                                </constraints>
                             </mapView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="status-panel" translatesAutoresizingMaskIntoConstraints="NO" id="XOH-8a-fuI">
-                                <rect key="frame" x="-13" y="39" width="414" height="100"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="status-panel" translatesAutoresizingMaskIntoConstraints="NO" id="1L7-6k-oEp">
+                                <rect key="frame" x="0.0" y="64" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="4Ud-dT-1FW"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU ARE CURRENTLY OFFLINE." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-k4-cEc">
-                                <rect key="frame" x="42" y="84" width="304" height="21"/>
+                                <rect key="frame" x="42" y="81" width="304" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="SK4-cJ-LdN"/>
-                                    <constraint firstAttribute="width" constant="304" id="x8B-RK-WYC"/>
+                                    <constraint firstAttribute="height" constant="21" id="R1w-aF-cca"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="offline-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ixT-Gd-HvO">
-                                <rect key="frame" x="8" y="85" width="20" height="20"/>
+                                <rect key="frame" x="10" y="84" width="15" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="8r5-xu-W4V"/>
-                                    <constraint firstAttribute="height" constant="20" id="Wb4-PJ-rX3"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Yq7-rw-Sli"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="jIC-4m-Dwe"/>
+                                    <constraint firstAttribute="width" constant="15" id="Xbg-MT-CRK"/>
+                                    <constraint firstAttribute="height" constant="15" id="pnd-pm-fzq"/>
                                 </constraints>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5oP-Hj-fBT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1kv-1A-v5Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ixT-Gd-HvO" firstAttribute="leading" secondItem="Ua9-Pp-QHg" secondAttribute="leading" constant="8" id="H2k-u8-lnK"/>
-                            <constraint firstAttribute="trailing" secondItem="5oP-Hj-fBT" secondAttribute="trailing" id="KDU-iC-dAc"/>
-                            <constraint firstItem="JhE-k4-cEc" firstAttribute="top" secondItem="jPx-Vz-Tht" secondAttribute="bottom" constant="20" id="Kgv-tU-vth"/>
-                            <constraint firstItem="JhE-k4-cEc" firstAttribute="leading" secondItem="ixT-Gd-HvO" secondAttribute="trailing" constant="14" id="Uhs-ua-8lE"/>
-                            <constraint firstItem="Gb8-Qz-V3h" firstAttribute="top" secondItem="5oP-Hj-fBT" secondAttribute="bottom" id="V4q-bo-gV7"/>
-                            <constraint firstItem="ixT-Gd-HvO" firstAttribute="top" secondItem="jPx-Vz-Tht" secondAttribute="bottom" constant="21" id="ZgA-8M-9JZ"/>
-                            <constraint firstItem="5oP-Hj-fBT" firstAttribute="top" secondItem="Ua9-Pp-QHg" secondAttribute="top" id="svt-TZ-gcQ"/>
-                            <constraint firstItem="5oP-Hj-fBT" firstAttribute="leading" secondItem="Ua9-Pp-QHg" secondAttribute="leading" id="uPj-ws-nsl"/>
+                            <constraint firstItem="ixT-Gd-HvO" firstAttribute="leading" secondItem="Ua9-Pp-QHg" secondAttribute="leading" constant="10" id="0ij-il-aJ9"/>
+                            <constraint firstItem="9XC-yn-eEd" firstAttribute="top" secondItem="1L7-6k-oEp" secondAttribute="bottom" constant="-15" id="2ec-aE-owF"/>
+                            <constraint firstItem="JhE-k4-cEc" firstAttribute="leading" secondItem="ixT-Gd-HvO" secondAttribute="trailing" constant="17" id="6zE-lh-DnU"/>
+                            <constraint firstItem="9XC-yn-eEd" firstAttribute="leading" secondItem="Ua9-Pp-QHg" secondAttribute="leading" id="7fD-LR-J1e"/>
+                            <constraint firstItem="JhE-k4-cEc" firstAttribute="top" secondItem="jPx-Vz-Tht" secondAttribute="bottom" constant="17" id="9At-FN-J1O"/>
+                            <constraint firstAttribute="trailing" secondItem="9XC-yn-eEd" secondAttribute="trailing" id="JmN-EU-2fg"/>
+                            <constraint firstItem="ixT-Gd-HvO" firstAttribute="top" secondItem="jPx-Vz-Tht" secondAttribute="bottom" constant="20" id="M6A-9P-3EH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JhE-k4-cEc" secondAttribute="trailing" constant="13" id="PIl-AR-ZjQ"/>
+                            <constraint firstAttribute="trailing" secondItem="grc-8s-47b" secondAttribute="trailing" id="Smo-HL-2c4"/>
+                            <constraint firstItem="1L7-6k-oEp" firstAttribute="leading" secondItem="Ua9-Pp-QHg" secondAttribute="leading" id="W4V-iN-Pgo"/>
+                            <constraint firstItem="grc-8s-47b" firstAttribute="leading" secondItem="Ua9-Pp-QHg" secondAttribute="leading" id="Zli-R7-Ccj"/>
+                            <constraint firstAttribute="trailing" secondItem="1L7-6k-oEp" secondAttribute="trailing" id="eeR-F4-FqZ"/>
+                            <constraint firstItem="1L7-6k-oEp" firstAttribute="top" secondItem="jPx-Vz-Tht" secondAttribute="bottom" id="kow-Sm-CKY"/>
+                            <constraint firstItem="grc-8s-47b" firstAttribute="top" secondItem="9XC-yn-eEd" secondAttribute="bottom" id="zef-uL-7LW"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="E-CHASE DRIVER" id="vhg-0m-gOQ"/>
@@ -350,6 +360,7 @@
                         <outlet property="fullNameOrderView" destination="ZhU-wY-ikF" id="7x3-gg-Uyl"/>
                         <outlet property="mapView" destination="9XC-yn-eEd" id="qaF-Sj-wiq"/>
                         <outlet property="orderView" destination="Oad-IZ-yY5" id="oOZ-SM-5KT"/>
+                        <outlet property="statusButton" destination="grc-8s-47b" id="PMp-vF-Ra4"/>
                         <outlet property="visualEffectView" destination="5oP-Hj-fBT" id="HDJ-Ee-mK6"/>
                     </connections>
                 </viewController>
@@ -447,7 +458,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NRw-bw-ORe">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NRw-bw-ORe">
                                 <rect key="frame" x="0.0" y="119" width="375" height="366"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -583,7 +594,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-5l-793">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="108" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-5l-793">
                                 <rect key="frame" x="0.0" y="64" width="375" height="461"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -662,6 +673,9 @@
                                                             <color key="value" red="0.19215686269999999" green="0.57254901960000004" blue="0.82352941180000006" alpha="1" colorSpace="calibratedRGB"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="checkboxValueChangedWithSender:" destination="YDE-3q-nMf" eventType="valueChanged" id="jgE-wo-iUP"/>
+                                                    </connections>
                                                 </view>
                                             </subviews>
                                             <constraints>
@@ -683,6 +697,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="itemCheckbox" destination="9XD-vk-cNv" id="gX7-h0-USg"/>
                                             <outlet property="itemImageView" destination="aRF-7P-rh6" id="0EL-77-7fE"/>
                                             <outlet property="itemPriceLabel" destination="VIF-OQ-F8e" id="Kfo-2o-WPp"/>
                                             <outlet property="itemTitleLabel" destination="xIX-mB-cIX" id="KhT-cY-Ved"/>
@@ -797,7 +812,7 @@
         <image name="map-preview" width="650" height="650"/>
         <image name="offline-icon" width="256" height="256"/>
         <image name="rounded-image-cradle" width="128" height="128"/>
-        <image name="status-panel" width="414" height="100"/>
+        <image name="status-panel" width="414" height="69"/>
         <image name="tap-when-done" width="313" height="48"/>
         <image name="© 2017 Socify LLC" width="105" height="14"/>
     </resources>

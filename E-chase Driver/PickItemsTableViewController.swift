@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
+import Firebase
+import M13Checkbox
 
-class PickItemsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PickItemsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
 
+    let locationManager = CLLocationManager()
+    var userLocation: CLLocationCoordinate2D!
+    var rawUserLocation: CLLocation!
+    
     @IBOutlet weak var itemsTableView: UITableView!
     var items = NSMutableArray()
     
@@ -25,6 +32,15 @@ class PickItemsTableViewController: UIViewController, UITableViewDelegate, UITab
         self.itemsTableView.delegate = self
         self.itemsTableView.dataSource = self
 
+        // INITIALIZE MAP
+        //self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+        
         let currentOrderRequest = GlobalVariables.CURRENT_ORDER_REQUEST
         //print("JSON VALUE: \(currentOrderRequest?["json"])")
         if let itemsArray = currentOrderRequest?["json"] as? NSArray {
@@ -108,6 +124,10 @@ class PickItemsTableViewController: UIViewController, UITableViewDelegate, UITab
             if let titleString = product["title"] as? String {
                 cell.itemTitleLabel.text = titleString
             }
+            
+            if let priceDouble = product["price"] as? Double {
+                cell.itemPriceLabel.text = "$\(String(format:"%.2f", priceDouble))"
+            }
         }
         if let store = orderItem?[1] as? [String: Any] {
             if let address = store["address"] as? String {
@@ -121,6 +141,32 @@ class PickItemsTableViewController: UIViewController, UITableViewDelegate, UITab
         return cell
     }
 
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locationManager.location?.coordinate {
+            rawUserLocation = locationManager.location
+            userLocation = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+ 
+            if let orderID = GlobalVariables.CURRENT_ORDER_REQUEST?["id"] as? String {
+                Database.database().reference().child("orders").child(orderID).updateChildValues(["driverLatitude":userLocation.latitude, "driverLongitude":userLocation.longitude])
+            }
+            
+        }
+    }
+    
+    @IBAction func checkboxValueChanged(sender: M13Checkbox) {
+        let buttonPosition:CGPoint = sender.convert(CGPoint.zero, to:self.itemsTableView)
+        let indexPath = self.itemsTableView.indexPathForRow(at: buttonPosition)
+        
+        let checkboxReferenced = (self.itemsTableView.cellForRow(at: indexPath!) as! PickItemTableViewCell).itemCheckbox
+        if let row = indexPath?.row {
+            if checkboxReferenced?.checkState == .checked {
+                Database.database().reference().child("orders").child(GlobalVariables.CURRENT_ORDER_ID).updateChildValues(["item\(row)PickedUp":"true"])
+            } else {
+                Database.database().reference().child("orders").child(GlobalVariables.CURRENT_ORDER_ID).updateChildValues(["item\(row)PickedUp":"false"])
+            }
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

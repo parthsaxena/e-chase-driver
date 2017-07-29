@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import M13Checkbox
 
 class PickItemTableViewCell: UITableViewCell {
 
@@ -15,6 +16,7 @@ class PickItemTableViewCell: UITableViewCell {
     @IBOutlet weak var storeNameLabel: UILabel!
     @IBOutlet weak var storeAddressLabel: UILabel!
     @IBOutlet weak var itemPriceLabel: UILabel!
+    @IBOutlet weak var itemCheckbox: M13Checkbox!
     
     override func awakeFromNib() {
         super.awakeFromNib()
